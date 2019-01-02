@@ -12,7 +12,8 @@ if "OPT" in cfg_vars:
 
 python_cec = Extension('cec', sources = [ 'cec.cpp', 'device.cpp'], 
                         include_dirs=['include'],
-                        library_dirs = ['C:\\Program Files (x86)\\Pulse-Eight\\USB-CEC Adapter'])
+                        library_dirs = ['C:\\Program Files (x86)\\Pulse-Eight\\USB-CEC Adapter'],
+                        library = ['cec'])
 
 setup(name='cec', version='0.2.7',
       description="Python bindings for libcec",

@@ -10,9 +10,9 @@ if "CFLAGS" in cfg_vars:
 if "OPT" in cfg_vars:
     cfg_vars["OPT"] = cfg_vars["OPT"].replace("-Wstrict-prototypes", "")
 
-python_cec = Extension('cec', sources = [ 'cec.cpp', 'device.cpp' ], 
+python_cec = Extension('cec', sources = [ 'cec.cpp', 'device.cpp'], 
                         include_dirs=['include'],
-                       libraries = [ 'cec' ])
+                       library_dirs = ['C:\Program Files (x86)\Pulse-Eight\USB-CEC Adapter'])
 
 setup(name='cec', version='0.2.7',
       description="Python bindings for libcec",

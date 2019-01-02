@@ -25,7 +25,7 @@
 
 // request the std format macros
 #define __STDC_FORMAT_MACROS
-
+#define NOMINMAX
 #include <Python.h>
 #include <stdlib.h>
 #include <inttypes.h>

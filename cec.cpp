@@ -25,6 +25,8 @@
 
 // request the std format macros
 #define __STDC_FORMAT_MACROS
+#define NOMINMAX
+#include <windows.h>
 
 #include <Python.h>
 #include <stdlib.h>
@@ -156,7 +158,7 @@ std::list<CEC_ADAPTER_TYPE> get_adapters() {
       dev_list = (CEC_ADAPTER_TYPE*)realloc(dev_list, 
          cec_count * sizeof(CEC_ADAPTER_TYPE));
       count = CEC_adapter->CEC_FIND_ADAPTERS(dev_list, cec_count);
-      count = (std::min)(count, cec_count);
+      count = std::min(count, cec_count);
    }
 
    for( int i=0; i<count; i++ ) {

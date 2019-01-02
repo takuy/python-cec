@@ -156,7 +156,7 @@ std::list<CEC_ADAPTER_TYPE> get_adapters() {
       dev_list = (CEC_ADAPTER_TYPE*)realloc(dev_list, 
          cec_count * sizeof(CEC_ADAPTER_TYPE));
       count = CEC_adapter->CEC_FIND_ADAPTERS(dev_list, cec_count);
-      count = (count >= cec_count ? cec_count : count)
+      count = (count >= cec_count ? cec_count : count);
    }
 
    for( int i=0; i<count; i++ ) {

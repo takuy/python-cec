@@ -12,7 +12,7 @@ if "OPT" in cfg_vars:
 
 python_cec = Extension('cec', sources = [ 'cec.cpp', 'device.cpp' ], 
                         include_dirs=['include'],
-                        libraries = [ 'cec' ])
+                        libraries = [ ])
 
 setup(name='cec', version='0.2.7',
       description="Python bindings for libcec",

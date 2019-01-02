@@ -23,8 +23,6 @@
  * Author: Austin Hendrix <namniart@gmail.com>
  */
 
-// request the std format macros
-#define __STDC_FORMAT_MACROS
 #define NOMINMAX
 #include <windows.h>
 
